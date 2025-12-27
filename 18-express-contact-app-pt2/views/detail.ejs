@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+
+            <% if (!contact) { %>
+                <div class="alert alert-danger" role="alert">
+                    Contact Tidak Ditemukan <a href="/contact" class="alert-link">Kembali ke Halaman Contact</a>.
+                </div>
+
+            <% } else { %>
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><%= contact.nama %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= contact.noHp %></h6>
+                    <p class="card-text"><%= contact.email %></p>
+                    <a href="/contact" class="card-link">Kembali Ke Halaman Contacts</a>
+                </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
